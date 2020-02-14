@@ -9,7 +9,7 @@
 public class Lib {
 	
 	/**
-	 * CommandLine
+	 * CmdLine
 	 * TODO
 	 *
 	 * @author 疾饭饭
@@ -19,25 +19,27 @@ public class Lib {
 	 * 命令：list
 	 * 命令行参数：-log -out
 	 */
-	static class CommandLine {
+	static class CmdLine {
 		
+		//命令
 		private Command command;
 		
+		//命令行参数
 		private Parameters parameters;
 		
-		public Command getCommand() {
+		public Command getCmd() {
             return command;
         }
 		
-		public void setCommand(Command command) {
+		public void setCmd(Command command) {
             this.command = command;
         }
 		
-		public Parameters getParameters() {
+		public Parameters getPrms() {
             return parameters;
         }
 		
-		public void setParameters(Parameters parameters) {
+		public void setPrms(Parameters parameters) {
             this.parameters = parameters;
         }
 		
@@ -77,13 +79,17 @@ public class Lib {
 		 */		
 		static class Parameters {
 			
+			//输入
 			private boolean log;
 			
-			private String log_content;
+			//输入路径
+			private String log_path;
 			
+			//输出
 			private boolean out;
 			
-			private String out_content;
+			//输出路径
+			private String out_path;
 			
 			public boolean isLog() {
 				return log;
@@ -93,12 +99,12 @@ public class Lib {
 				this.log=log;
 			}
 			
-			public String getLog_content() {
-				return log_content;
+			public String getLog_path() {
+				return log_path;
 			}
 			
-			public void setLog_content(String log_content) {
-				this.log_content = log_content;
+			public void setLog_path(String log_path) {
+				this.log_path = log_path;
 			}
 			
 			public boolean isOut() {
@@ -109,12 +115,12 @@ public class Lib {
 				this.out=out;
 			}
 			
-			public String getOut_content() {
-				return out_content;
+			public String getOut_path() {
+				return out_path;
 			}
 			
-			public void setOut_content(String out_content) {
-				this.out_content = out_content;
+			public void setOut_path(String out_path) {
+				this.out_path = out_path;
 			}
 		}
 	}
